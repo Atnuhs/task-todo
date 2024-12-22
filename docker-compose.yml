@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:17.2-bookworm
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=appdb
+    ports:
+      - 5432:5432
+    volumes:
+    - ./data:/var/lib/postgresql/data
